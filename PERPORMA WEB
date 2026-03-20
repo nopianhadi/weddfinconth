@@ -1,0 +1,821 @@
+
+Laporan dari 15 Mar 2026, 14.57.50
+https://atteravisual.netlify.app/
+Masukkan URL yang valid
+
+
+smartphone
+Mobile
+
+computer
+Desktop
+
+Mencari tahu pengalaman pengguna Anda yang sebenarnya
+Tidak Ada Data
+
+Mendiagnosis masalah performa
+87
+Performa
+88
+Aksesibilitas
+96
+Praktik Terbaik
+91
+SEO
+87
+FCP
++8
+LCP
++22
+TBT
++30
+CLS
++22
+SI
++6
+Performa
+Nilai adalah hasil perkiraan dan dapat bervariasi. Skor performa dihitung secara langsung dari metrik ini.Lihat kalkulator.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Metrik
+Luaskan tampilan
+First Contentful Paint
+1,1 dtk
+Largest Contentful Paint
+1,3 dtk
+Total Blocking Time
+0 md
+Cumulative Layout Shift
+0.111
+Speed Index
+2,1 dtk
+Captured at 15 Mar 2026, 14.57 WIB
+Desktop Emulasi with Lighthouse 13.0.1
+Sesi satu halaman
+Pemuatan halaman awal
+Throttle kustom
+Using HeadlessChromium 145.0.7632.116 with lr
+Lihat Peta Hierarki
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Tampilkan audit yang relevan dengan:
+
+All
+
+FCP
+
+LCP
+
+TBT
+
+CLS
+Insight
+Penyebab perubahan tata letak
+Perincian LCP
+Penemuan permintaan LCP
+Hierarki dependensi jaringan
+Meningkatkan penayangan gambar Perkiraan penghematan 330 KiB
+Permintaan pemblokiran rendering
+Pihak ketiga
+Insight ini juga tersedia di Panel Performa Chrome DevTools - rekam aktivitas untuk melihat informasi yang lebih mendetail.
+Diagnostik
+Kurangi JavaScript yang tidak digunakan Perkiraan penghematan 267 KiB
+Kurangi CSS yang tidak digunakan Perkiraan penghematan 29 KiB
+Elemen gambar tidak memiliki width dan height yang jelas
+Kecilkan CSS Perkiraan penghematan 3 KiB
+Hindari tugas thread utama yang berjalan lama 3 tugas berjalan lama
+Informasi selengkapnya tentang performa aplikasi Anda. Angka ini tidak secara langsung memengaruhi skor Performa.
+Lulus audit (15)
+Tampilkan
+88
+Aksesibilitas
+Pemeriksaan ini menandai peluang untuk meningkatkan aksesibilitas aplikasi web Anda. Deteksi otomatis hanya dapat mendeteksi sebagian masalah dan tidak menjamin aksesibilitas aplikasi web Anda, sehingga pengujian manual juga dianjurkan.
+Kontras
+Warna latar belakang dan latar depan tidak memiliki rasio kontras yang cukup.
+Ini adalah peluang untuk meningkatkan keterbacaan konten Anda.
+Praktik terbaik
+Dokumen tidak memiliki penanda utama.
+Item berikut memperjelas praktik terbaik yang umum untuk aksesibilitas.
+Item tambahan untuk diperiksa secara manual (10)
+Tampilkan
+Item berikut ini menangani area yang tidak dapat dicakup oleh fitur pengujian otomatis. Pelajari lebih lanjut dalam panduan kami tentang menjalankan tinjauan aksesibilitas.
+Lulus audit (9)
+Tampilkan
+Tidak berlaku (49)
+Tampilkan
+96
+Praktik Terbaik
+Umum
+Error browser dicatat di konsol
+Library JavaScript yang terdeteksi
+Tidak ada peta sumber untuk JavaScript pihak pertama berukuran besar
+Kepercayaan dan Keamanan
+Pastikan CSP efektif melawan serangan XSS
+Memastikan isolasi origin yang tepat dengan COOP
+Mitigasi clickjacking dengan XFO atau CSP
+Memitigasi XSS berbasis DOM dengan Trusted Types
+Lulus audit (11)
+Tampilkan
+Tidak berlaku (2)
+Tampilkan
+91
+SEO
+Pemeriksaan ini memastikan bahwa halaman Anda mengikuti saran pengoptimalan mesin telusur dasar. Ada banyak faktor tambahan yang tidak diperhitungkan oleh Lighthouse di sini yang mungkin memengaruhi peringkat penelusuran Anda, termasuk performa di Data Web Inti. Pelajari lebih lanjut Google Penelusuran Essentials.
+Praktik Terbaik Konten
+Dokumen tidak memiliki deskripsi meta
+Format HTML Anda dengan cara yang memungkinkan crawler untuk lebih memahami konten aplikasi Anda.
+Item tambahan untuk diperiksa secara manual (1)
+Tampilkan
+Jalankan validator tambahan ini di situs Anda untuk memeriksa praktik terbaik SEO lainnya.
+Lulus audit (7)
+Tampilkan
+Tidak berlaku (2)
+Laporan dari 15 Mar 2026, 14.57.50
+https://atteravisual.netlify.app/
+Masukkan URL yang valid
+
+
+smartphone
+Mobile
+
+computer
+Desktop
+
+Mencari tahu pengalaman pengguna Anda yang sebenarnya
+Tidak Ada Data
+
+Mendiagnosis masalah performa
+56
+Performa
+88
+Aksesibilitas
+96
+Praktik Terbaik
+91
+SEO
+56
+FCP
++1
+LCP
++3
+TBT
++30
+CLS
++16
+SI
++6
+Performa
+Nilai adalah hasil perkiraan dan dapat bervariasi. Skor performa dihitung secara langsung dari metrik ini.Lihat kalkulator.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Metrik
+Luaskan tampilan
+First Contentful Paint
+4,7 dtk
+Largest Contentful Paint
+6,3 dtk
+Total Blocking Time
+0 md
+Cumulative Layout Shift
+0.187
+Speed Index
+5,3 dtk
+Captured at 15 Mar 2026, 14.57 WIB
+Moto G Power Teremulasi with Lighthouse 13.0.1
+Sesi satu halaman
+Pemuatan halaman awal
+Throttle 4G lambat
+Using HeadlessChromium 145.0.7632.116 with lr
+Lihat Peta Hierarki
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Tampilkan audit yang relevan dengan:
+
+All
+
+FCP
+
+LCP
+
+TBT
+
+CLS
+Insight
+Meningkatkan penayangan gambar Perkiraan penghematan 338 KiB
+Permintaan pemblokiran rendering Perkiraan penghematan 340 md
+Penyebab perubahan tata letak
+Perincian LCP
+Penemuan permintaan LCP
+Hierarki dependensi jaringan
+Pihak ketiga
+Insight ini juga tersedia di Panel Performa Chrome DevTools - rekam aktivitas untuk melihat informasi yang lebih mendetail.
+Diagnostik
+Kurangi JavaScript yang tidak digunakan Perkiraan penghematan 267 KiB
+Kurangi CSS yang tidak digunakan Perkiraan penghematan 28 KiB
+Elemen gambar tidak memiliki width dan height yang jelas
+Kecilkan CSS Perkiraan penghematan 3 KiB
+Hindari tugas thread utama yang berjalan lama 3 tugas berjalan lama
+Informasi selengkapnya tentang performa aplikasi Anda. Angka ini tidak secara langsung memengaruhi skor Performa.
+Lulus audit (15)
+Tampilkan
+88
+Aksesibilitas
+Pemeriksaan ini menandai peluang untuk meningkatkan aksesibilitas aplikasi web Anda. Deteksi otomatis hanya dapat mendeteksi sebagian masalah dan tidak menjamin aksesibilitas aplikasi web Anda, sehingga pengujian manual juga dianjurkan.
+Kontras
+Warna latar belakang dan latar depan tidak memiliki rasio kontras yang cukup.
+Ini adalah peluang untuk meningkatkan keterbacaan konten Anda.
+Praktik terbaik
+Dokumen tidak memiliki penanda utama.
+Item berikut memperjelas praktik terbaik yang umum untuk aksesibilitas.
+Item tambahan untuk diperiksa secara manual (10)
+Tampilkan
+Item berikut ini menangani area yang tidak dapat dicakup oleh fitur pengujian otomatis. Pelajari lebih lanjut dalam panduan kami tentang menjalankan tinjauan aksesibilitas.
+Lulus audit (9)
+Tampilkan
+Tidak berlaku (49)
+Tampilkan
+96
+Praktik Terbaik
+Umum
+Error browser dicatat di konsol
+Library JavaScript yang terdeteksi
+Tidak ada peta sumber untuk JavaScript pihak pertama berukuran besar
+Kepercayaan dan Keamanan
+Pastikan CSP efektif melawan serangan XSS
+Memastikan isolasi origin yang tepat dengan COOP
+Mitigasi clickjacking dengan XFO atau CSP
+Memitigasi XSS berbasis DOM dengan Trusted Types
+Lulus audit (11)
+Tampilkan
+Tidak berlaku (2)
+Tampilkan
+91
+SEO
+Pemeriksaan ini memastikan bahwa halaman Anda mengikuti saran pengoptimalan mesin telusur dasar. Ada banyak faktor tambahan yang tidak diperhitungkan oleh Lighthouse di sini yang mungkin memengaruhi peringkat penelusuran Anda, termasuk performa di Data Web Inti. Pelajari lebih lanjut Google Penelusuran Essentials.
+Praktik Terbaik Konten
+Dokumen tidak memiliki deskripsi meta
+Format HTML Anda dengan cara yang memungkinkan crawler untuk lebih memahami konten aplikasi Anda.
+Item tambahan untuk diperiksa secara manual (1)
+Tampilkan
+Jalankan validator tambahan ini di situs Anda untuk memeriksa praktik terbaik SEO lainnya.
+Lulus audit (7)
+Tampilkan
+Tidak berlaku (2)
+VBerikut **analisis performa website** Anda: **[https://atteravisual.netlify.app/](https://atteravisual.netlify.app/)** berdasarkan laporan Lighthouse yang Anda kirim.
+
+---
+
+# 📊 Analisis Performa Website
+
+## 1️⃣ Skor Utama
+
+| Kategori        | Skor   | Analisis                                |
+| --------------- | ------ | --------------------------------------- |
+| ⚡ Performa      | **56** | Masih lambat (target ideal 90+)         |
+| ♿ Aksesibilitas | **88** | Sudah baik, hanya perlu perbaikan kecil |
+| ✅ Best Practice | **96** | Sangat baik                             |
+| 🔎 SEO          | **91** | Sudah bagus                             |
+
+👉 **Masalah utama website Anda ada di performa loading.**
+
+---
+
+# ⚡ Analisis Kecepatan (Core Web Vitals)
+
+| Metrik      | Hasil         | Ideal      | Analisis                   |
+| ----------- | ------------- | ---------- | -------------------------- |
+| FCP         | **4.7 detik** | <1.8 detik | Konten pertama muncul lama |
+| LCP         | **6.3 detik** | <2.5 detik | Elemen utama sangat lambat |
+| TBT         | **0 ms**      | <200 ms    | Sudah bagus                |
+| CLS         | **0.187**     | <0.1       | Layout sedikit bergeser    |
+| Speed Index | **5.3 detik** | <3 detik   | Loading visual lambat      |
+
+📌 **Kesimpulan:**
+Website terasa **lambat saat pertama dibuka**, terutama di mobile.
+
+---
+
+# 🖼 Masalah Utama yang Ditemukan
+
+## 1️⃣ Gambar Terlalu Besar
+
+Penghematan: **338 KB**
+
+Masalah:
+
+* gambar belum di-compress
+* belum pakai format modern
+
+Solusi:
+
+✔ gunakan format
+
+```
+WEBP
+AVIF
+```
+
+✔ kompres dengan:
+
+* TinyPNG
+* Squoosh
+* ImageOptim
+
+Contoh:
+
+```
+hero.jpg (800kb)
+→ hero.webp (120kb)
+```
+
+---
+
+## 2️⃣ Render Blocking Script
+
+Penghematan: **340 ms**
+
+Masalah:
+CSS dan JS menghalangi halaman tampil.
+
+Solusi:
+
+Tambahkan:
+
+```html
+<link rel="preload">
+```
+
+atau
+
+```html
+<script defer src="script.js"></script>
+```
+
+---
+
+## 3️⃣ JavaScript Tidak Terpakai
+
+Penghematan: **267 KB**
+
+Biasanya karena:
+
+* library terlalu besar
+* plugin tidak dipakai
+
+Contoh:
+
+```
+AOS
+Swiper
+FontAwesome
+```
+
+Solusi:
+
+✔ hapus yang tidak dipakai
+✔ gunakan **tree shaking**
+
+---
+
+## 4️⃣ CSS Tidak Terpakai
+
+Penghematan: **28 KB**
+
+Solusi:
+
+Gunakan:
+
+```
+PurgeCSS
+```
+
+atau
+
+```
+Tailwind purge
+```
+
+---
+
+## 5️⃣ Gambar Tidak Memiliki Width dan Height
+
+Masalah ini menyebabkan **layout shift (CLS)**.
+
+Contoh salah:
+
+```html
+<img src="hero.jpg">
+```
+
+Perbaiki:
+
+```html
+<img src="hero.jpg" width="800" height="600">
+```
+
+---
+
+# 🎨 Masalah Aksesibilitas
+
+## Kontras warna kurang
+
+Contoh buruk:
+
+```
+abu-abu muda + putih
+```
+
+Solusi:
+
+Gunakan rasio minimal:
+
+```
+4.5 : 1
+```
+
+---
+
+# 🔎 Masalah SEO
+
+Website Anda **tidak memiliki meta description**.
+
+Tambahkan:
+
+```html
+<meta name="description" content="Attera Visual - Jasa foto dan video wedding profesional di Indonesia.">
+```
+
+---
+
+# 🚀 Target Performa Ideal
+
+Setelah optimasi seharusnya bisa mencapai:
+
+| Metrik      | Target  |
+| ----------- | ------- |
+| Performance | **90+** |
+| FCP         | <1.5s   |
+| LCP         | <2.5s   |
+| CLS         | <0.1    |
+
+---
+
+# 🔥 Prioritas Perbaikan (Paling Penting)
+
+Urutan yang harus Anda lakukan:
+
+### 1️⃣ Kompres gambar hero
+
+Efek terbesar.
+
+### 2️⃣ Gunakan format WEBP
+
+### 3️⃣ Lazy Load gambar
+
+```html
+<img loading="lazy">
+```
+
+### 4️⃣ Minify JS & CSS
+
+### 5️⃣ Tambahkan width height gambar
+
+---
+
+# 💡 Saran Khusus untuk Website Anda
+
+Karena Anda membuat banyak website **vendor wedding / fotografi**, biasanya masalahnya:
+
+📷 **gambar terlalu besar**
+
+Solusi terbaik:
+
+```
+Hero image max: 200kb
+Gallery image: 80kb
+Thumbnail: 40kb
+```
+
+---
+
+# ⭐ Prediksi Setelah Optimasi
+
+Jika diperbaiki:
+
+| Sebelum        | Sesudah  |
+| -------------- | -------- |
+| Performance 56 | **90+**  |
+| LCP 6.3s       | **2s**   |
+| FCP 4.7s       | **1.5s** |
+
+---
+
+💡 Jika Anda mau, saya bisa bantu juga:
+
+✅ **Audit langsung website Anda**
+✅ **Menunjukkan file mana yang bikin lambat**
+✅ **Cara optimasi Netlify + React/Vite**
+
+Bahkan saya bisa kasih **script optimasi otomatis** supaya skor Lighthouse Anda bisa **95+**.
+Build project Anda **berhasil**, tidak ada error. 👍
+Tetapi dari log **Vite build** yang Anda kirim, ada beberapa hal penting yang perlu dianalisis karena berhubungan dengan **skor performa Lighthouse Anda yang hanya 56**.
+
+Saya jelaskan analisisnya.
+
+---
+
+# ⚠️ 1. File JavaScript Terlalu Besar
+
+Masalah terbesar ada di file ini:
+
+```
+dist/assets/vendor-Dwju51nQ.js  1,071.51 kB
+gzip: 278.17 kB
+```
+
+Artinya:
+
+📦 **1 file JS = 1 MB**
+
+Ini sangat besar untuk web modern.
+
+Idealnya:
+
+| Jenis File | Ideal    |
+| ---------- | -------- |
+| JS utama   | < 200 KB |
+| Total JS   | < 500 KB |
+
+👉 Website Anda **>1MB**
+
+Ini yang membuat:
+
+* **FCP lambat**
+* **LCP lambat**
+* **Skor performa 56**
+
+---
+
+# ⚠️ 2. Terlalu Banyak Bundle Feature
+
+Contoh bundle:
+
+```
+feature-leads        172kb
+feature-clients      134kb
+feature-projects     130kb
+feature-public       111kb
+feature-finance      106kb
+```
+
+Ini artinya:
+
+📦 Semua fitur ikut diload saat halaman dibuka.
+
+Padahal idealnya:
+
+```
+Dashboard load
+↓
+feature dimuat saat dibuka
+```
+
+Ini disebut **Code Splitting / Lazy Load**
+
+---
+
+# ⚠️ 3. CSS Terlalu Besar
+
+```
+index.css 232 KB
+```
+
+Ideal:
+
+```
+50kb – 120kb
+```
+
+Biasanya ini karena:
+
+* Tailwind semua class ikut
+* CSS library terlalu banyak
+
+---
+
+# ⚠️ 4. Build Time Lama
+
+```
+built in 1m 5s
+```
+
+Artinya project cukup besar.
+
+---
+
+# ⚠️ 5. Warning Browserslist
+
+Ini hanya warning kecil:
+
+```
+Browserslist: browsers data is 6 months old
+```
+
+Perbaiki dengan:
+
+```bash
+npx update-browserslist-db@latest
+```
+
+Tidak berpengaruh ke performa.
+
+---
+
+# 🚨 Masalah Terbesar Website Anda
+
+Urutan masalah:
+
+### 1️⃣ vendor.js terlalu besar
+
+1MB
+
+### 2️⃣ feature bundle terlalu banyak
+
+### 3️⃣ CSS terlalu besar
+
+---
+
+# 🚀 Solusi Optimasi (Sangat Penting)
+
+## 1️⃣ Aktifkan Code Splitting di Vite
+
+Edit **vite.config.ts**
+
+```ts
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+          supabase: ["@supabase/supabase-js"],
+        }
+      }
+    }
+  }
+})
+```
+
+Ini bisa mengurangi vendor JS sampai **40%**
+
+---
+
+# 🚀 2️⃣ Lazy Load Halaman
+
+Contoh salah:
+
+```tsx
+import Dashboard from "./pages/Dashboard"
+```
+
+Perbaiki:
+
+```tsx
+const Dashboard = lazy(() => import("./pages/Dashboard"))
+```
+
+Dan gunakan:
+
+```tsx
+<Suspense fallback={<Loading/>}>
+```
+
+Ini bisa menaikkan performa **+20 skor Lighthouse**.
+
+---
+
+# 🚀 3️⃣ Aktifkan Tree Shaking
+
+Pastikan:
+
+```json
+package.json
+```
+
+ada:
+
+```json
+"sideEffects": false
+```
+
+---
+
+# 🚀 4️⃣ Optimasi Tailwind
+
+Di file:
+
+```
+tailwind.config.js
+```
+
+Pastikan:
+
+```js
+content: [
+"./index.html",
+"./src/**/*.{js,ts,jsx,tsx}"
+]
+```
+
+Ini akan menghapus CSS yang tidak dipakai.
+
+---
+
+# 🚀 5️⃣ Kompres Gambar
+
+Untuk website fotografi seperti Anda:
+
+Ideal ukuran:
+
+| Jenis      | Max Size |
+| ---------- | -------- |
+| Hero image | 200kb    |
+| Gallery    | 80kb     |
+| Thumbnail  | 40kb     |
+
+Format:
+
+```
+webp
+```
+
+---
+
+# 🚀 Prediksi Setelah Optimasi
+
+Jika dilakukan:
+
+| Sebelum      | Sesudah         |
+| ------------ | --------------- |
+| JS total 1MB | 400KB           |
+| CSS 232KB    | 100KB           |
+| Lighthouse   | 56 → **90+**    |
+| LCP          | 6.3s → **2.1s** |
+
+---
+
+# ⭐ Saran Khusus Untuk Project Anda
+
+Karena ini **dashboard besar (Vena Pictures / Weddfinter)**, struktur terbaik:
+
+```
+src
+ ├ pages
+ ├ features
+ ├ components
+ ├ hooks
+ ├ services
+```
+
+Dan setiap **feature di lazy load**.
+
+---
+
+# 🔥 Jika Anda mau, saya bisa bantu lebih jauh:
+
+Saya bisa kasih:
+
+### ✅ Struktur Vite React Dashboard yang **sangat cepat**
+
+### ✅ Config Vite supaya skor **Lighthouse 95+**
+
+### ✅ Cara membuat bundle **<300kb**
+
+### ✅ Cara deploy Netlify super cepat
+
+Kalau mau, kirim juga:
+
+```
+vite.config.ts
+package.json
+```
+
+Saya bisa langsung **audit dan optimasi project Anda**.
