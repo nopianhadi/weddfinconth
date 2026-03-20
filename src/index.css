@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .input-group {
+    @apply relative w-full mb-4 mt-2;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-brand-surface border border-brand-border rounded-xl text-brand-text-primary text-base outline-none transition-all focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+  
+  .input-group .input-field::placeholder {
+    color: transparent;
+  }
+  
+  .input-label {
+    @apply absolute left-4 top-3.5 text-brand-text-secondary text-base transition-all bg-brand-surface px-1 pointer-events-none;
+  }
+  
+  .input-group .input-field:focus ~ .input-label,
+  .input-group .input-field:not(:placeholder-shown) ~ .input-label {
+    @apply -top-2.5 left-3 text-sm text-blue-500 font-medium;
+  }
+}
+
 /* Custom CSS variables and styles */
 :root {
   /* App Dashboard Colors */
@@ -40,7 +63,7 @@
 }
 
 body {
-  font-family: 'Manrope', 'sans-serif';
+  font-family: 'Manrope', sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;

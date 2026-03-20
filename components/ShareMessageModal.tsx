@@ -95,6 +95,7 @@ export default function ShareMessageModal({ isOpen, onClose, title, initialMessa
                         onChange={e => setMessage(e.target.value)}
                         rows={14}
                         className="input-field"
+                        placeholder=" "
                     />
                     <label className="input-label">Preview Pesan (bisa diedit)</label>
                 </div>

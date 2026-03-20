@@ -17,7 +17,6 @@ import { findCardIdByMeta } from '../services/cards';
 import InvoiceDocument from './InvoiceDocument';
 import { generateWhatsAppLink, cleanPhoneNumber as whatsappCleanPhone } from '../utils/whatsapp';
 import { DEFAULT_BILLING_TEMPLATES } from '../constants';
-import ShareMessageModal from './ShareMessageModal';
 
 
 const formatCurrency = (amount: number) => {
@@ -127,7 +126,6 @@ interface BillingChatModalProps {
 const BillingChatModal: React.FC<BillingChatModalProps> = ({ isOpen, onClose, client, projects, userProfile, showNotification }) => {
     const [message, setMessage] = useState('');
     const [selectedTemplateId, setSelectedTemplateId] = useState('');
-    const [sharePreview, setSharePreview] = useState<{ title: string; message: string; phone?: string | null } | null>(null);
 
     // Use profile billing templates if available, otherwise use defaults
     const BILLING_CHAT_TEMPLATES = (userProfile.billingTemplates && userProfile.billingTemplates.length > 0)
@@ -161,7 +159,7 @@ const BillingChatModal: React.FC<BillingChatModalProps> = ({ isOpen, onClose, cl
 
         setMessage(processedMessage);
 
-    }, [client, projects, userProfile, selectedTemplateId]);
+    }, [client, projects, userProfile, selectedTemplateId, BILLING_CHAT_TEMPLATES]);
 
     const handleShareToWhatsApp = () => {
         if (!client || (!client.phone && !client.whatsapp)) {
@@ -173,11 +171,11 @@ const BillingChatModal: React.FC<BillingChatModalProps> = ({ isOpen, onClose, cl
             return;
         }
 
-        setSharePreview({
-            title: `Kirim Tagihan ke ${client.name}`,
-            message,
-            phone: client.whatsapp || client.phone,
-        });
+        const phone = client.whatsapp || client.phone;
+        const cleanPhone = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+        const url = `https://wa.me/${cleanPhone(phone || '')}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+        onClose();
     };
 
     if (!isOpen || !client) return null;
@@ -201,7 +199,7 @@ const BillingChatModal: React.FC<BillingChatModalProps> = ({ isOpen, onClose, cl
                     </div>
                 </div>
                 <div className="input-group">
-                    <textarea value={message} onChange={e => setMessage(e.target.value)} rows={12} className="input-field"></textarea>
+                    <textarea value={message} onChange={e => setMessage(e.target.value)} rows={12} className="input-field" placeholder=" "></textarea>
                     <label className="input-label">Isi Pesan</label>
                 </div>
                 <div className="flex justify-end items-center pt-4 border-t border-brand-border">
@@ -210,19 +208,6 @@ const BillingChatModal: React.FC<BillingChatModalProps> = ({ isOpen, onClose, cl
                     </button>
                 </div>
             </div>
-            {sharePreview && (
-                <ShareMessageModal
-                    isOpen={!!sharePreview}
-                    onClose={() => {
-                        setSharePreview(null);
-                        onClose();
-                    }}
-                    title={sharePreview.title}
-                    initialMessage={sharePreview.message}
-                    phone={sharePreview.phone}
-                    showNotification={showNotification}
-                />
-            )}
         </Modal>
     );
 };
@@ -1329,7 +1314,6 @@ const Clients: React.FC<ClientsProps> = ({ clients, setClients, projects, setPro
     const [documentToView, setDocumentToView] = useState<{ type: 'invoice', project: Project } | { type: 'receipt', transaction: Transaction } | null>(null);
     const [isSignatureModalOpen, setIsSignatureModalOpen] = useState(false);
     const [qrModalContent, setQrModalContent] = useState<{ title: string; url: string; clientName: string; clientPhone?: string } | null>(null);
-    const [sharePreview, setSharePreview] = useState<{ title: string; message: string; phone?: string | null } | null>(null);
 
     // Editing for documents
     const [isTransactionEditModalOpen, setIsTransactionEditModalOpen] = useState(false);
@@ -2151,11 +2135,9 @@ const Clients: React.FC<ClientsProps> = ({ clients, setClients, projects, setPro
                 `_(File PDF invoice juga telah kami kirimkan terpisah)_\n\n` +
                 `Terima kasih atas kepercayaan Anda. Semoga acaranya berjalan lancar! 🙏`;
 
-            setSharePreview({
-                title: `Bagikan Invoice - ${proj.projectName}`,
-                message: text,
-                phone,
-            });
+            const cleanPhone = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+            const url = `https://wa.me/${cleanPhone(phone || '')}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
 
         } else if (documentToView.type === 'receipt') {
             const tx = documentToView.transaction;
@@ -2226,11 +2208,9 @@ const Clients: React.FC<ClientsProps> = ({ clients, setClients, projects, setPro
                     `Terima kasih, pembayaran Anda telah kami terima dengan baik. Semoga persiapannya lancar! 🙏`;
             }
 
-            setSharePreview({
-                title: `Bagikan Tanda Terima - ${tx.id.slice(0, 8).toUpperCase()}`,
-                message: text,
-                phone,
-            });
+            const cleanPhone = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+            const url = `https://wa.me/${cleanPhone(phone || '')}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
         }
     };
 
@@ -2797,11 +2777,9 @@ const Clients: React.FC<ClientsProps> = ({ clients, setClients, projects, setPro
                                         `📋 Package & vendor yang dipilih\n\n` +
                                         `🔗 *Akses Portal Anda di sini:*\n${qrModalContent.url}\n\n` +
                                         `Jika ada pertanyaan, jangan ragu menghubungi kami. Semoga membantu! 🙏`;
-                                    setSharePreview({
-                                        title: 'Bagikan Portal Pengantin',
-                                        message: template,
-                                        phone: qrModalContent.clientPhone,
-                                    });
+                                    const cleanPhone = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+                                    const url = `https://wa.me/${cleanPhone(qrModalContent.clientPhone || '')}?text=${encodeURIComponent(template)}`;
+                                    window.open(url, '_blank');
                                 }}
                                 className="button-primary flex-1 !bg-green-500 hover:!bg-green-600 inline-flex items-center justify-center gap-2"
                             >
@@ -2813,16 +2791,6 @@ const Clients: React.FC<ClientsProps> = ({ clients, setClients, projects, setPro
                 </Modal>
             )}
 
-            {sharePreview && (
-                <ShareMessageModal
-                    isOpen={!!sharePreview}
-                    onClose={() => setSharePreview(null)}
-                    title={sharePreview.title}
-                    initialMessage={sharePreview.message}
-                    phone={sharePreview.phone}
-                    showNotification={showNotification}
-                />
-            )}
             <Modal isOpen={isSignatureModalOpen} onClose={() => setIsSignatureModalOpen(false)} title="Bubuhkan Tanda Tangan Anda">
                 <SignaturePad onClose={() => setIsSignatureModalOpen(false)} onSave={handleSaveSignature} />
             </Modal>

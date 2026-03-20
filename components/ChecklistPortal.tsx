@@ -13,7 +13,6 @@ import {
 } from '../services/weddingDayChecklist';
 import { supabase } from '../lib/supabaseClient';
 import { CheckCircleIcon, PlusIcon, SendIcon, TrashIcon, PencilIcon, UserIcon, XIcon, MessageSquareIcon, MoreVerticalIcon } from 'lucide-react';
-import ShareMessageModal from './ShareMessageModal';
 
 type Props = {
   projectId: string;
@@ -23,7 +22,6 @@ export default function ChecklistPortal({ projectId }: Props) {
   const [project, setProject] = useState<Project | null>(null);
   const [items, setItems] = useState<WeddingDayChecklist[]>([]);
   const [loading, setLoading] = useState(true);
-  const [sharePreview, setSharePreview] = useState<{ title: string; message: string } | null>(null);
   
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [notesDraft, setNotesDraft] = useState('');
@@ -177,10 +175,8 @@ export default function ChecklistPortal({ projectId }: Props) {
       message += `\n`;
     });
 
-    setSharePreview({
-      title: 'Bagikan Rekap Checklist',
-      message,
-    });
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
 
   const portalLink = `${window.location.origin}/#/checklist-portal/${projectId}`;
@@ -188,10 +184,8 @@ export default function ChecklistPortal({ projectId }: Props) {
   const handleSharePortalLink = () => {
     const message = `Link Portal Checklist Hari H${project?.projectName ? ` - ${project.projectName}` : ''}:\n${portalLink}`;
 
-    setSharePreview({
-      title: 'Bagikan Link Portal Checklist',
-      message,
-    });
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
 
   const totalItems = items.length;
@@ -233,15 +227,6 @@ export default function ChecklistPortal({ projectId }: Props) {
       </div>
 
       <div className="relative max-w-2xl mx-auto px-4 py-8 md:py-12">
-        {sharePreview && (
-          <ShareMessageModal
-            isOpen={!!sharePreview}
-            onClose={() => setSharePreview(null)}
-            title={sharePreview.title}
-            initialMessage={sharePreview.message}
-            phone={null}
-          />
-        )}
         <header className="mb-8 animate-in">
           <div className="flex items-start justify-between mb-6">
             <div className="space-y-1">

@@ -885,10 +885,9 @@ interface ProjectDetailModalProps {
     transactions: Transaction[];
     teamProjectPayments: TeamProjectPayment[];
     cards: Card[];
-    onOpenSharePreview: (data: { title: string; message: string; phone?: string | null }) => void;
 };
 
-const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ selectedProject, setSelectedProject, teamMembers, clients, profile, showNotification, setProjects, onClose, handleOpenForm, handleProjectDelete, handleOpenBriefingModal, packages, transactions, teamProjectPayments, cards, onOpenSharePreview }) => {
+const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ selectedProject, setSelectedProject, teamMembers, clients, profile, showNotification, setProjects, onClose, handleOpenForm, handleProjectDelete, handleOpenBriefingModal, packages, transactions, teamProjectPayments, cards }) => {
     const [detailTab, setDetailTab] = useState<'details' | 'files' | 'checklist'>('details');
     const [newCharge, setNewCharge] = useState({ name: '', amount: '' });
     const [isEditingFinalLink, setIsEditingFinalLink] = useState(false);
@@ -1125,11 +1124,9 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ selectedProject
             .replace(/{projectName}/g, selectedProject.projectName)
             .replace(/{finalDriveLink}/g, selectedProject.finalDriveLink);
 
-        onOpenSharePreview({
-            title: `Bagikan Link File Jadi - ${selectedProject.projectName}`,
-            message,
-            phone,
-        });
+        const cleanPhoneNum = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+        const url = `https://wa.me/${cleanPhoneNum(phone)}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
     };
 
     const handleNewChargeSubmit = async () => {
@@ -1381,11 +1378,13 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ selectedProject
             message += `\n`;
         });
 
-        onOpenSharePreview({
-            title: `Bagikan Rekap Checklist - ${selectedProject.projectName}`,
-            message,
-            phone: null,
-        });
+        const client = clients.find(c => c.id === selectedProject.clientId);
+        const phone = client?.whatsapp || client?.phone;
+        const cleanPhoneNum = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+        const url = phone 
+            ? `https://wa.me/${cleanPhoneNum(phone)}?text=${encodeURIComponent(message)}`
+            : `https://wa.me/?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
     };
 
     const handleShareChecklistPortal = () => {
@@ -1393,11 +1392,13 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ selectedProject
         const portalLink = `${window.location.origin}/#/checklist-portal/${selectedProject.id}`;
         const message = `Portal Checklist Hari H - ${selectedProject.projectName}\n\n${portalLink}`;
 
-        onOpenSharePreview({
-            title: `Bagikan Portal Checklist - ${selectedProject.projectName}`,
-            message,
-            phone: null,
-        });
+        const client = clients.find(c => c.id === selectedProject.clientId);
+        const phone = client?.whatsapp || client?.phone;
+        const cleanPhoneNum = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+        const url = phone 
+            ? `https://wa.me/${cleanPhoneNum(phone)}?text=${encodeURIComponent(message)}`
+            : `https://wa.me/?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
     };
 
     if (!selectedProject) return null;
@@ -2411,7 +2412,6 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ selectedProject
 export const Projects: React.FC<ProjectsProps> = ({ projects, setProjects, clients, packages, teamMembers, teamProjectPayments, setTeamProjectPayments, transactions, setTransactions, initialAction, setInitialAction, profile, showNotification, cards, setCards, pockets, setPockets, totals }) => {
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
     const [chatModalData, setChatModalData] = useState<{ project: Project; client: Client } | null>(null);
-    const [sharePreview, setSharePreview] = useState<SharePreviewData>(null);
 
     const [searchTerm, setSearchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState<string | 'all'>('all');
@@ -3598,7 +3598,6 @@ export const Projects: React.FC<ProjectsProps> = ({ projects, setProjects, clien
                     transactions={transactions}
                     teamProjectPayments={teamProjectPayments}
                     cards={cards}
-                    onOpenSharePreview={(data) => setSharePreview({ title: data.title, message: data.message, phone: data.phone })}
                 />
             </Modal>
 
@@ -3743,25 +3742,15 @@ export const Projects: React.FC<ProjectsProps> = ({ projects, setProjects, clien
                     client={chatModalData.client}
                     userProfile={profile}
                     onSendMessage={(projectId, messageText) => {
-                        setSharePreview({
-                            title: `Bagikan Pesan - ${chatModalData.client.name}`,
-                            message: messageText,
-                            phone: chatModalData.client.whatsapp || chatModalData.client.phone,
-                        });
+                        const phone = chatModalData.client.whatsapp || chatModalData.client.phone;
+                        const cleanPhoneNum = (p: string) => p.replace(/\D/g, '').replace(/^0/, '62');
+                        const url = `https://wa.me/${cleanPhoneNum(phone || '')}?text=${encodeURIComponent(messageText)}`;
+                        window.open(url, '_blank');
                     }}
                 />
             )}
 
-            {sharePreview && (
-                <ShareMessageModal
-                    isOpen={!!sharePreview}
-                    onClose={() => setSharePreview(null)}
-                    title={sharePreview.title}
-                    initialMessage={sharePreview.message}
-                    phone={sharePreview.phone}
-                    showNotification={showNotification}
-                />
-            )}
+
         </div>
     );
 };

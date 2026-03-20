@@ -1499,7 +1499,12 @@ function App() {
     window.location.hash = "#/dashboard";
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await supabase.auth.signOut();
+    } catch (e) {
+      console.warn("[Logout] Supabase sign out failed:", e);
+    }
     setIsAuthenticated(false);
     setCurrentUser(null);
     setIsSidebarOpen(false);
